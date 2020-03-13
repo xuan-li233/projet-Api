@@ -1,0 +1,73 @@
+// Config
+@import "config/reset";
+@import "config/font-face";
+@import "config/variables";
+@import "config/mixins";
+@import "config/global";
+
+// Layouts
+ @import "layouts/homepage";
+
+// Components
+@import "components/activity";
+@import "components/background";
+body {
+ h1{
+  transform:translateY(-80px);
+  transition: transform 2s;
+
+ }
+.first.cache,.person.cache,.button.cache{
+ display: none;
+}
+  //.person{
+  //@include fade-in-c;
+  //
+  //
+  //}
+  .button {
+
+   display: flex;
+   @include fade-in-c;
+   width: 1000px;
+   justify-content: center;
+   .id{
+    margin-top: 50px;
+
+   }
+  }
+
+
+ .activity {
+
+  display: none;
+
+  .name-activity {
+   text-align: center;
+   padding-bottom: 70px;
+  }
+
+  .detail-activity {
+   display: grid;
+   grid-template-columns: 300px 300px 300px;
+   justify-content: space-between;
+   text-align: center;
+
+
+  }
+ }
+ .activity.is-ready{
+  display: inline;
+ }
+ .refresh-icon{
+  position: absolute;
+  top: 500px;
+  display: none;
+  transform: scale(0.2);
+
+ }
+ .refresh-icon.active{
+  display: inline;
+ }
+}
+

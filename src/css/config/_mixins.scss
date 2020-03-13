@@ -1,0 +1,22 @@
+%opacity-transition {
+  opacity: 0;
+  transition: opacity 0.25s ease-in;
+  &.is-ready {
+    opacity: 1;
+  }
+}
+
+
+@keyframes fade-in
+{
+  0%{ opacity: 0;}
+  100%{opacity:1;}
+}
+@mixin fade-in-c{
+  opacity: 0;
+  animation: fade-in 4s ease 0s 1;
+  animation-fill-mode:forwards;
+}
+@mixin font{
+  font-size: 30pt;
+}

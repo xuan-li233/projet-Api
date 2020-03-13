@@ -1,0 +1,13 @@
+body {
+  font-family: $font-main !important;
+  background-color: $white;
+  position: relative;
+  height: 100vh;
+  @include font;
+  h1{
+    font-size: 50pt;
+
+    color: $black;
+    margin-top: -5%;
+  }
+}
