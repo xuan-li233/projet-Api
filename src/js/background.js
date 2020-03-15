@@ -6,18 +6,21 @@ import $ from 'jquery';
 
 export default class Background{
     constructor(activity){
-        this.initEls();
+        this.initEls(activity);
         this.initEvents();
+
     }
 
-    initEls(){
+    initEls(activity){
         this.$els = {
             background: $('.background'),
         }
-        this.url = 'https://source.unsplash.com/random';
-        this.cat = '638440';
-        this.size = '1920*1080';
-        // this.maVar =true ;
+        this.url = 'https://source.unsplash.com/weekly?';
+        this.content = activity.split(" ");
+        console.log(this.content);
+
+
+
     }
     initEvents(){
         this.loadImage();
@@ -26,7 +29,7 @@ export default class Background{
     loadImage(){
         const  promise = new Promise( (resolve, reject) => {
             const image = new Image();
-            image.src = `${this.url}/${this.size}`;
+            image.src = `${this.url}/${this.content}`;
             image.onload = () => {
                 resolve(image);
             };

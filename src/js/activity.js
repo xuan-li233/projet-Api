@@ -30,7 +30,7 @@ export default class Activity{
 			endpoint: 'http://www.boredapi.com/api/activity',
 			params:{
 				'per_page':1,
-				'participants':3
+
 			}
 
 		    };
@@ -56,6 +56,7 @@ export default class Activity{
 		    this.$els.priceActiv.text("Price: "+price);
 		    this.$els.container.addClass('is-ready');
 		    new Background(activity);
+
 	        }
 
 
