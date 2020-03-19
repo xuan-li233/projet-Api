@@ -17,6 +17,8 @@ export default class Background{
         }
         this.url = 'https://source.unsplash.com/weekly?';
         this.content = activity.split(" ");
+        this.content = this.content[this.content.length-2]+','+this.content[this.content.length-1];
+
         console.log(this.content);
 
 
