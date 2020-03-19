@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack --config webpack.prod.js --mode production"
+    "build": "webpack --config webpack.prod.js --mode production",
+    "test": "react-scripts test --env=jsdom",
+    "lint": "eslint src --fix",
+    "lint:create": "eslint --init"
   },
+ 
   "author": "",
   "license": "ISC",
   "devDependencies": {
